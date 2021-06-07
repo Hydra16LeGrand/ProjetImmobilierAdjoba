@@ -1,0 +1,283 @@
+{% extends 'static.html' %}
+{% load static %}
+
+{% block static %}
+
+<section class="hero-section">
+<div class="hero-items owl-carousel">
+<div class="single-hero-item set-bg" data-setbg="{% static 'img/hero/hero-1.jpg' %}">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-2">
+<div class="hero-text">
+<p class="room-location"><i class="icon_pin"></i> Cocody Blokosso Embassade</p>
+ <h2>Villa Cocody Blokosso Embassade</h2>
+<div class="room-price">
+<span>Commence avec:</span>
+<p>1.650.000.000 FCFA</p>
+</div>
+<ul class="room-features">
+<li>
+<i class="fa fa-arrows"></i>
+<p>320 BP Abidjan</p>
+</li>
+<li>
+<i class="fa fa-bed"></i>
+<p>8 Salle de bain</p>
+</li>
+<li>
+<i class="fa fa-bath"></i>
+<p>7 Douches</p>
+</li>
+<li>
+<i class="fa fa-car"></i>
+<p>1 Garage</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="single-hero-item set-bg" data-setbg="{% static 'img/hero/hero-2.jpg' %}">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-2">
+<div class="hero-text">
+<p class="room-location"><i class="icon_pin"></i> Riviera Golf. Cocody, Abidjan</p>
+<h2>Villa Riviera Golf Cocody</h2>
+<div class="room-price">
+<span>Commence Avec:</span>
+<p>1.500.000.000 FCFA</p>
+</div>
+<ul class="room-features">
+<li>
+<i class="fa fa-arrows"></i>
+<p>860 BP ABidjan</p>
+</li>
+<li>
+<i class="fa fa-bed"></i>
+<p>7 Chambres a couche</p>
+</li>
+<li>
+<i class="fa fa-bath"></i>
+<p>6 Salles de bain</p>
+</li>
+ <li>
+<i class="fa fa-car"></i>
+<p>1 Garage</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="single-hero-item set-bg" data-setbg="{% static 'img/hero/hero-3.jpg' %}">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-2">
+<div class="hero-text">
+<p class="room-location"><i class="icon_pin"></i> Cocody Danga. Pas loin du lycee classique, Abidjan</p>
+<h2>Villa Cocody Danga. Abidjan</h2>
+<div class="room-price">
+<span>Commene Avec:</span>
+<p>2.000.000.000 FCFA</p>
+</div>
+<ul class="room-features">
+<li>
+<i class="fa fa-arrows"></i>
+<p>BP 320 Abidjan</p>
+</li>
+<li>
+<i class="fa fa-bed"></i>
+<p>9 Chambres</p>
+</li>
+<li>
+<i class="fa fa-bath"></i>
+<p>8 Salles de bain</p>
+</li>
+<li>
+<i class="fa fa-car"></i>
+<p>2 Garages</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="thumbnail-pic">
+<div class="thumbs owl-carousel">
+<div class="item">
+<img src="{% static 'img/hero/dot-1.jpg' %}" alt="">
+</div>
+<div class="item">
+<img src="{% static 'img/hero/dot-2.jpg' %}" alt="">
+</div>
+<div class="item">
+<img src="{% static 'img/hero/dot-3.jpg' %}" alt="">
+</div>
+</div>
+</div>
+</section>
+
+
+<div class="search-form">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="search-form-text">
+<div class="search-text">
+<i class="fa fa-search"></i>
+Trouvez Vôtre Maison 
+</div>
+<div class="home-text">
+<i class="fa fa-home"></i>
+Maison à vendre
+</div>
+</div>
+<form action="#" class="filter-form">
+<div class="first-row">
+<select>
+<option value="">Villa & Piscine</option>
+</select>
+<select>
+<option value="">Titre</option>
+</select>
+<select>
+<option value="">Quelque soit la ville</option>
+</select>
+<select>
+<option value="">Nombre de douche</option>
+</select>
+</div>
+<div class="second-row">
+<select>
+<option value="">Nombre de chambre</option>
+</select>
+<div class="price-range-wrap">
+<div class="price-text">
+<label for="priceRange">Prix:</label>
+<input type="text" id="priceRange" readonly>
+</div>
+<div id="price-range" class="slider"></div>
+</div>
+<div class="room-size-range">
+<div class="price-text">
+<label for="roomsizeRange">Taille:</label>
+<input type="text" id="roomsizeRange" readonly>
+</div>
+<div id="roomsize-range" class="slider"></div>
+</div>
+<button type="button" class="search-btn">Réchercher</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<section class="howit-works spad">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title">
+<span>Trouvez la maison de vos rêves</span>
+<h2>Comment ça marche</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4">
+<div class="single-howit-works">
+<img src="{% static 'img/howit-works/howit-works-1.png' %}" alt="">
+<h4>Cherche ton terrain ou ta maison</h4>
+<p>Trouvez un terrain situé au bon endroit et au bon moment
+    est une chose plus qu'aisée sur Adjoba. Prenez votre envole
+    avec toutes les ressources de la plateforme pour realiser un voyage
+    qui foisonne de perplexité car les produits d'Adjoba vous mettrons
+    assurement dans l'ambarra du choix.
+</p>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="single-howit-works">
+<img src="{% static 'img/howit-works/howit-works-2.png' %}" alt="">
+<h4>Trouve ta pièce</h4>
+<p>Des maisons de tout type ne font defaut d'être presents sur  
+    notre plateforme. Trouvez votre bonheur avec une maison qui remplira 
+    parfaitement vos critères. Aussi, oubliez toutes les deceptions ou
+    les arnaques qui sévissent dans l'immobilier.
+</p>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="single-howit-works">
+<img src="{% static 'img/howit-works/howit-works-3.png' %}" alt="">
+<h4>Discuter avec le bot</h4>
+<p>Un chatbot efficace à disponibilité pour vous servir à tout moment en
+    repondant à vos suggestions. Lancez-vous en ecrivant au bot pour des 
+    préoccupations ou des suggestions concernant peut-être la qualité des
+    services proposés par adjoba.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<div class="video-section set-bg" data-setbg="{% static 'img/video-bg.jpg' %}">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="video-text">
+<a href="https://www.youtube.com/watch?v=EzKkl64rRbM" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+<h4>Trouvez l'idéal </h4>
+<h2>Agent immobilier près de vous</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<section class="agent-section spad">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title">
+<span>Disponible pour vous aider</span>
+<h2>Nos Agents</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="agent-carousel owl-carousel">
+
+{% for agent in agents %}
+<div class="col-lg-3">
+<div class="single-agent">
+<div class="sa-pic">
+<img src="{{ agent.get_profil }}" alt="">
+<div class="hover-social">
+<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+</div>
+</div>
+<h5>{{ agent.nom }} <span>{{ agent.role }}</span></h5>
+</div>
+</div>
+{% endfor %}
+
+</div>
+</div>
+</div>
+</section>
+
+
+{% endblock %}

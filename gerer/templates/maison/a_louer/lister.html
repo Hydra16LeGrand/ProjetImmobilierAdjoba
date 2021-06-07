@@ -1,0 +1,11 @@
+{% if message %}
+
+	<script type="text/javascript">alert('{{message}}')</script>
+{% endif %}
+<h1><center>Louer une maison ici</center></h1>
+{% for maison in maisons %}
+
+	<img src="{{ maison.get_image }}"><h2>{{maison.type_maison}}</h2>{{maison.nbre_chambre}}- {{ maison.nbre_sallon }}- {{ maison.nbre_garage }}- {{ maison.nbre_douche }}-{{ maison.localisation }}
+	{{ maison.autre_detail }}<a href="{% url 'louer_maison' maison.id %}">Louer</a>
+{% endfor %}
+

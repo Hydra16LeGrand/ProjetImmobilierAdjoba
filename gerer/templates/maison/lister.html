@@ -1,0 +1,134 @@
+{% extends 'static.html' %}
+{% load static %}
+{% if message %}
+
+	<script type="text/javascript">alert('{{message}}')</script>
+{% endif %}
+
+{% block static %}
+
+
+<section class="property-section spad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="property-sidebar">
+					<h4>Recherche de proprietes</h4>
+					<form action="#" class="sidebar-search">
+						<div class="sidebar-btn">
+							<div class="bt-item">
+								<input type="radio" name="s-type" id="st-buy" checked>
+								<label for="st-buy">Acheter</label>
+							</div>
+							<div class="bt-item">
+								<input type="radio" name="s-type" id="st-rent">
+								<label for="st-rent">Louer</label>
+							</div>
+						</div>
+						<select>
+							<option value="">Locations</option>
+						</select>
+						<select>
+							<option value="">Type de maison</option>
+						</select>
+						<select>
+							<option value="">Nombre de chambres</option>
+						</select>
+						<select>
+							<option value="">Nombre de douches</option>
+						</select>
+						<select>
+						<option value="">Nombre de personnes</option>
+						</select>
+						<div class="room-size-range">
+							<div class="price-text">
+								<label for="roomsizeRangeP">Taille:</label>
+								<input type="text" id="roomsizeRangeP" readonly>
+							</div>
+							<div id="roomsize-range-P" class="slider"></div>
+						</div>
+						<div class="price-range-wrap">
+							<div class="price-text">
+								<label for="priceRangeP">Prix:</label>
+								<input type="text" id="priceRangeP" readonly>
+							</div>
+							<div id="price-range-P" class="slider"></div>
+						</div>
+						<button type="submit" class="search-btn">Recherche de proprietes</button>
+					</form>
+					<div class="best-agents">
+						<h4>Meilleurs agents</h4>
+						{% for agent in agents  %}
+						<a href="#" class="ba-item">
+							<div class="ba-pic">
+								<img src="{{ agent.get_profil }}" alt="">
+							</div>
+							<div class="ba-text">
+								<h5>{{ agent.nom }}</h5>
+								<span>{{ agent.role }}</span>
+								<p class="property-items">{{ agent.nbre_vente }}</p>
+							</div>
+						</a>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<h4 class="property-title">Proprietes</h4>
+				<div class="property-list">
+					{% for maison in maisons %}
+					<div class="single-property-item">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="property-pic">
+									<img src="{{ maison.get_image }}" alt="">
+								</div>
+							</div>
+							<div class="col-md-8">
+								<div class="property-text">
+									<a href="{% url 'acheter_maison' maison.id %}"><div class="s-text">Acheter</div></a>
+									<h5 class="r-title">{{ maison.localisation }}</h5>
+									<div class="room-price">
+										<span>Commence avec:</span>
+										<h5>{{ maison.prix }}</h5>
+									</div>
+									<div class="properties-location"><i class="icon_pin"></i> {{ maison.localisation }}</div>
+									<p>{{ maison.autre_detail }}</p>
+									<ul class="room-features">
+										<li>
+											<i class="fa fa-arrows"></i>
+											<p>Abidjan</p>
+										</li>
+										<li>
+											<i class="fa fa-bed"></i>
+											<p>{{ maison.nbre_chambre }}</p>
+										</li>
+										<li>
+											<i class="fa fa-bath"></i>
+											<p>{{ maison.nbre_douche }}</p>
+										</li>
+										<li>
+											<i class="fa fa-car"></i>
+											<p>{{ maison.nbre_garage }}</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<br>
+						<br>
+						{% endfor %}
+					</div>
+					
+				</div>
+				<div class="property-pagination">
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

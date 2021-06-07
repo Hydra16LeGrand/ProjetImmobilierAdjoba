@@ -1,0 +1,39 @@
+{% if message %}
+
+	<script type="text/javascript"> alert('{{ message }}') </script>
+
+{% endif %}
+
+<h1><center>Bienvenue {{ email }}</center></h1>
+
+<div>
+	<nav>
+		<ul>
+			<li>Maison
+				<ul>
+					<li><a href="{% url 'lister_maison' %}">Acheter Maison</a></li>
+					<li><a href="#">Louer Maison</a></li>
+					<li><a href="#">Vendre Maison</a></li>
+
+					<li><a href="{% url 'maison_a_acheter' %}">Maison a acheter</a></li>
+					<li><a href="#">Maison a louer</a></li>
+					<li><a href="#">Deja achete</a></li>
+					<li><a href="#">Deja louee</a></li>
+				</ul>
+			</li>
+			<li>Terrain
+				<ul>
+					<li><a href="{% url 'lister_terrain' %}">Acheter Terrain</a></li>
+					<li><a href="#">Louer Terrain</a></li>
+					<li><a href="#">Vendre Terrain</a></li>
+
+					<li><a href="{% url 'terrain_a_acheter' %}">Terrain a acheter</a></li>
+					<li><a href="#">Terrain a louer</a></li>
+					<li><a href="#">Deja achete</a></li>
+					<li><a href="#">Deja louee</a></li>
+				</ul>
+			</li>
+			<li><a href="{% url 'deconnexion' %}">Deconnexion</a></li>
+		</ul>
+	</nav>
+</div>
